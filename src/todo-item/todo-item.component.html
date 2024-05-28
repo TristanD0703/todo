@@ -1,0 +1,18 @@
+<div class="todoContainer" [class.completed]="todoData.completed">
+    <p>
+        {{todoData.title}}
+    </p>
+    <p>
+        {{todoData.description}}
+    </p>
+    <p>
+        {{todoData.dueHour}} : {{todoData.dueMin}}
+    </p>
+    <form >
+        <label>
+           Mark completed
+            <input (click)="markComplete()" type="button" value="completed" />
+        </label>
+    </form>
+    
+</div>

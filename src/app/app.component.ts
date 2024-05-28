@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NgOptimizedImage } from '@angular/common';
 import { TodoItem, todoItem } from '../todo-item/todo-item.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TodoItem],
+  imports: [RouterOutlet, TodoItem, NgOptimizedImage],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -29,7 +30,7 @@ export class AppComponent {
   addTodo() {
     this.todos.push({
         title: 'test',
-        id: this.todos.length + 1,
+        id: this.todos.length,
         description: 'none',
         dueMin: 0,
         dueHour: 0,

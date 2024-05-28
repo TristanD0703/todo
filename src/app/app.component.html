@@ -6,6 +6,11 @@
     @for(item of todos; track $index) {
       <todo-item [todoData]="item" class="item" (completeItem)="handleComplete($event)" />
     }
-
+    <img 
+      ngSrc="https://cdn.iconscout.com/icon/free/png-256/free-add-new-1439785-1214356.png?f=webp&w=256"
+      width="50" 
+      height="50"
+      (click)="addTodo()"
+    />
   </div>
 </main>
